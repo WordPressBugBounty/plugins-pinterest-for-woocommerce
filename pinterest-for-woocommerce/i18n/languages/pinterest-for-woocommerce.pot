@@ -1,22 +1,22 @@
 # Copyright (C) 2026 WooCommerce
-# This file is distributed under the GPL-2.0+.
+# This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pinterest for WooCommerce 1.5.1\n"
+"Project-Id-Version: Pinterest for WooCommerce 1.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pinterest-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-17T14:04:37+00:00\n"
+"POT-Creation-Date: 2026-10-07T14:26:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pinterest-for-woocommerce\n"
 
 #. Plugin Name of the plugin
 #: pinterest-for-woocommerce.php
-#: src/MultichannelMarketing/PinterestChannel.php:63
+#: src/MultichannelMarketing/PinterestChannel.php:65
 msgid "Pinterest for WooCommerce"
 msgstr ""
 
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Description of the plugin
 #: pinterest-for-woocommerce.php
-#: src/MultichannelMarketing/PinterestChannel.php:72
+#: src/MultichannelMarketing/PinterestChannel.php:74
 msgid "Grow your business on Pinterest! Use this official plugin to allow shoppers to Pin products while browsing your store, track conversions, and advertise on Pinterest."
 msgstr ""
 
@@ -41,62 +41,62 @@ msgstr ""
 msgid "https://woocommerce.com"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:167
+#: class-pinterest-for-woocommerce.php:171
 msgid "Cloning this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:176
+#: class-pinterest-for-woocommerce.php:180
 msgid "Deserializing instances of this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:184
+#: class-pinterest-for-woocommerce.php:188
 msgid "Only a single instance of this class is allowed. Use singleton."
 msgstr ""
 
 #. Translators: The minimum PHP version
-#: class-pinterest-for-woocommerce.php:429
+#: class-pinterest-for-woocommerce.php:434
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum PHP version of %s."
 msgstr ""
 
 #. Translators: The minimum WP version
-#: class-pinterest-for-woocommerce.php:434
+#: class-pinterest-for-woocommerce.php:439
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WordPress version of %s."
 msgstr ""
 
 #. Translators: The minimum WC version
-#: class-pinterest-for-woocommerce.php:439
+#: class-pinterest-for-woocommerce.php:444
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WooCommerce version of %s."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:447
+#: class-pinterest-for-woocommerce.php:452
 msgid "Pinterest for WooCommerce requires WooCommerce Admin to be enabled."
 msgstr ""
 
 #. Translators: The minimum Action Scheduler version
-#: class-pinterest-for-woocommerce.php:452
+#: class-pinterest-for-woocommerce.php:457
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum Action Scheduler package of %s. It can be caused by old version of the WooCommerce extensions."
 msgstr ""
 
 #. Translators: The error description
-#: class-pinterest-for-woocommerce.php:759
+#: class-pinterest-for-woocommerce.php:764
 #: src/API/TokenExchangeV3ToV5.php:122
 #, php-format
 msgid "Could not decrypt the Pinterest API access token. Try reconnecting to Pinterest. [%s]"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:972
+#: class-pinterest-for-woocommerce.php:977
 msgid "Commerce Integration cannot be created: Advertiser ID is missing."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1076
+#: class-pinterest-for-woocommerce.php:1081
 msgid "There was an error getting the account data."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1297
+#: class-pinterest-for-woocommerce.php:1302
 msgid "Pinterest for WooCommerce verification page"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 #: includes/admin/class-pinterest-for-woocommerce-admin.php:99
 #: includes/admin/class-pinterest-for-woocommerce-admin.php:217
 #: includes/admin/class-pinterest-for-woocommerce-admin.php:224
-#: views/attributes/variations-form.php:32
+#: views/attributes/variations-form.php:31
 #: assets/source/setup-guide/index.js:52
 msgid "Pinterest"
 msgstr ""
@@ -143,8 +143,8 @@ msgid "Cheatin' huh?"
 msgstr ""
 
 #. translators: 1: composer command. 2: plugin directory
-#: pinterest-for-woocommerce.php:81
-#: pinterest-for-woocommerce.php:99
+#: pinterest-for-woocommerce.php:80
+#: pinterest-for-woocommerce.php:98
 #, php-format
 msgid "Your installation of the Pinterest for WooCommerce plugin is incomplete. Please run %1$s within the %2$s directory."
 msgstr ""
@@ -155,15 +155,15 @@ msgstr ""
 msgid "Could not fetch ads campaign status due to: %s"
 msgstr ""
 
-#: src/Admin/Product/Attributes/AttributesForm.php:133
+#: src/Admin/Product/Attributes/AttributesForm.php:140
 msgid "Default"
 msgstr ""
 
-#: src/Admin/Product/Attributes/AttributesTab.php:192
+#: src/Admin/Product/Attributes/AttributesTab.php:188
 msgid "Simple product"
 msgstr ""
 
-#: src/Admin/Product/Attributes/AttributesTab.php:193
+#: src/Admin/Product/Attributes/AttributesTab.php:189
 msgid "Variable product"
 msgstr ""
 
@@ -235,7 +235,7 @@ msgid "There was an error getting the account data. Please try again later."
 msgstr ""
 
 #. Translators: 1: Request method 2: Request endpoint 3: Response status code 4: Response message 5: Pinterest code
-#: src/API/Base.php:103
+#: src/API/Base.php:99
 #, php-format
 msgid ""
 "%1$s Request: %2$s\n"
@@ -245,17 +245,17 @@ msgid ""
 msgstr ""
 
 #. translators: Empty error body exception.
-#: src/API/Base.php:306
+#: src/API/Base.php:300
 #, php-format
 msgid "Response body processing error: $1%s"
 msgstr ""
 
-#: src/API/Base.php:358
+#: src/API/Base.php:352
 msgid "Empty body"
 msgstr ""
 
-#: src/API/Base.php:433
-#: src/API/Base.php:818
+#: src/API/Base.php:427
+#: src/API/Base.php:812
 #: src/Merchants.php:141
 msgid "Auto-created by Pinterest for WooCommerce"
 msgstr ""
@@ -275,7 +275,7 @@ msgid "(Variation)"
 msgstr ""
 
 #: src/API/FeedState.php:92
-#: src/API/FeedState.php:200
+#: src/API/FeedState.php:208
 msgid "XML feed"
 msgstr ""
 
@@ -284,146 +284,146 @@ msgid "Product sync is disabled."
 msgstr ""
 
 #. Translators: The error description as returned from the API
-#: src/API/FeedState.php:116
+#: src/API/FeedState.php:124
 #, php-format
 msgid "Error getting feed's state. [%s]"
 msgstr ""
 
-#: src/API/FeedState.php:139
+#: src/API/FeedState.php:147
 msgid "Feed generation in progress."
 msgstr ""
 
 #. translators: 1: Time string, 2: number of products, 3: opening anchor tag, 4: closing anchor tag
-#: src/API/FeedState.php:143
+#: src/API/FeedState.php:151
 #, php-format
 msgid "Last activity: %1$s ago - Wrote %2$s product to %3$sfeed file%4$s."
 msgid_plural "Last activity: %1$s ago - Wrote %2$s products to %3$sfeed file%4$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/API/FeedState.php:159
+#: src/API/FeedState.php:167
 msgid "Up to date"
 msgstr ""
 
 #. translators: 1: Time string, 2: total number of products, 3: opening anchor tag, 4: closing anchor tag
-#: src/API/FeedState.php:163
+#: src/API/FeedState.php:171
 #, php-format
 msgid "Successfully generated %1$s ago - Wrote %2$s product to %3$sfeed file%4$s"
 msgid_plural "Successfully generated %1$s ago - Wrote %2$s products to %3$sfeed file%4$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/API/FeedState.php:179
+#: src/API/FeedState.php:187
 msgid "Feed generation will start shortly."
 msgstr ""
 
-#: src/API/FeedState.php:184
+#: src/API/FeedState.php:192
 msgid "Feed configuration will start shortly."
 msgstr ""
 
-#: src/API/FeedState.php:189
+#: src/API/FeedState.php:197
 msgid "Could not get feed info."
 msgstr ""
 
 #. Translators: %1$s Time string, %2$s error message
-#: src/API/FeedState.php:192
+#: src/API/FeedState.php:200
 #, php-format
 msgid "Last activity: %1$s ago - %2$s"
 msgstr ""
 
-#: src/API/FeedState.php:224
 #: src/API/FeedState.php:232
+#: src/API/FeedState.php:240
 msgid "Product feed not yet configured on Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:240
+#: src/API/FeedState.php:248
 msgid "Product feed declined by Pinterest"
 msgstr ""
 
-#: src/API/FeedState.php:252
+#: src/API/FeedState.php:260
 msgid "Product feed configured for ingestion on Pinterest"
 msgstr ""
 
-#: src/API/FeedState.php:261
+#: src/API/FeedState.php:269
 msgid "Product feed pending approval on Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:265
+#: src/API/FeedState.php:273
 msgid "Remote feed setup"
 msgstr ""
 
-#: src/API/FeedState.php:293
+#: src/API/FeedState.php:301
 msgid "Pinterest tag"
 msgstr ""
 
-#: src/API/FeedState.php:295
-#: src/API/FeedState.php:324
+#: src/API/FeedState.php:303
+#: src/API/FeedState.php:332
 msgid "Potential conflicting plugins"
 msgstr ""
 
-#: src/API/FeedState.php:322
+#: src/API/FeedState.php:330
 msgid "Pinterest Rich Pins"
 msgstr ""
 
-#: src/API/FeedState.php:353
+#: src/API/FeedState.php:361
 msgid "Feed report from Pinterest contains no information."
 msgstr ""
 
-#: src/API/FeedState.php:366
+#: src/API/FeedState.php:374
 msgid "Remote sync status"
 msgstr ""
 
-#: src/API/FeedState.php:412
+#: src/API/FeedState.php:420
 msgid "Processing completed"
 msgstr ""
 
-#: src/API/FeedState.php:414
+#: src/API/FeedState.php:422
 msgid "Feed is disapproved by Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:416
+#: src/API/FeedState.php:424
 msgid "Processing failed"
 msgstr ""
 
-#: src/API/FeedState.php:418
+#: src/API/FeedState.php:426
 msgid "Processing"
 msgstr ""
 
-#: src/API/FeedState.php:420
+#: src/API/FeedState.php:428
 msgid "The feed is queued for processing."
 msgstr ""
 
-#: src/API/FeedState.php:422
+#: src/API/FeedState.php:430
 msgid "Feed is under appeal."
 msgstr ""
 
-#: src/API/FeedState.php:424
+#: src/API/FeedState.php:432
 msgid "Feed is under review."
 msgstr ""
 
-#: src/API/FeedState.php:426
+#: src/API/FeedState.php:434
 msgid "Unknown processing result status."
 msgstr ""
 
 #. Translators: %1$s Time difference string, %2$s number of products
-#: src/API/FeedState.php:451
+#: src/API/FeedState.php:459
 #, php-format
 msgid "%1$s ago, containing %2$d products"
 msgstr ""
 
 #. Translators: %1$s Time difference string
-#: src/API/FeedState.php:458
+#: src/API/FeedState.php:466
 #, php-format
 msgid "%1$s ago"
 msgstr ""
 
 #. Translators: %1$s Time difference string, %2$s number of products
-#: src/API/FeedState.php:466
+#: src/API/FeedState.php:474
 msgid "Overview numbers may be inaccurate until processing finishes."
 msgstr ""
 
 #. Translators: The status text returned by the API.
-#: src/API/FeedState.php:476
+#: src/API/FeedState.php:484
 #, php-format
 msgid "Pinterest returned an unknown feed status: %1$s"
 msgstr ""
@@ -432,7 +432,7 @@ msgstr ""
 msgid "Missing option parameters."
 msgstr ""
 
-#: src/API/Settings.php:74
+#: src/API/Settings.php:96
 msgid "There was an error saving the settings."
 msgstr ""
 
@@ -787,13 +787,13 @@ msgid "Tracking advertiser or tag missing"
 msgstr ""
 
 #. translators: plugin version.
-#: src/PluginUpdate.php:184
+#: src/PluginUpdate.php:205
 #, php-format
 msgid "Plugin updated to version: %s."
 msgstr ""
 
 #. translators: 1: plugin version, 2: failed procedure, 3: error message.
-#: src/PluginUpdate.php:207
+#: src/PluginUpdate.php:228
 #, php-format
 msgid "Plugin update to version %1$s. Procedure: %2$s. Error: %3$s"
 msgstr ""
@@ -811,7 +811,7 @@ msgid "Used"
 msgstr ""
 
 #. translators: %s product id
-#: src/ProductsXmlFeed.php:339
+#: src/ProductsXmlFeed.php:348
 #, php-format
 msgid "The product [%s] has a description longer than the allowed limit."
 msgstr ""
@@ -835,13 +835,13 @@ msgid "Visit the <a href=\"%1$s\">settings</a> page to enable it."
 msgstr ""
 
 #. Translators: %s is the endpoint.
-#: src/RefreshToken.php:102
+#: src/RefreshToken.php:105
 #, php-format
 msgid "Refresh token request to %s."
 msgstr ""
 
 #. Translators: 1: Conflicting plugins, 2: Plugins Admin page opening tag, 3: Pinterest settings opening tag, 4: Closing anchor tag
-#: src/RichPins.php:299
+#: src/RichPins.php:316
 #, php-format
 msgid "The following installed plugin(s) can potentially cause problems with Rich Pins: %1$s. %2$sRemove conflicting plugins%4$s or %3$smanage Rich Pins settings%4$s."
 msgstr ""
@@ -865,8 +865,8 @@ msgid ""
 msgstr ""
 
 #. translators: 1. the error message as returned by the Pinterest API
-#: src/Tracking/Conversions.php:455
-#: src/Tracking/Conversions.php:468
+#: src/Tracking/Conversions.php:452
+#: src/Tracking/Conversions.php:465
 #, php-format
 msgid "Error: $1%s"
 msgstr ""
@@ -1006,11 +1006,11 @@ msgstr ""
 msgid "You have %s of free ad credits left to use"
 msgstr ""
 
-#: assets/source/catalog-sync/sections/SyncState.js:61
+#: assets/source/catalog-sync/sections/SyncState.js:64
 msgid "Overview"
 msgstr ""
 
-#: assets/source/catalog-sync/sections/SyncState.js:75
+#: assets/source/catalog-sync/sections/SyncState.js:78
 msgid "Create ads to increase your reach with the <adsManagerLink>Pinterest ads manager</adsManagerLink>"
 msgstr ""
 
@@ -1225,7 +1225,7 @@ msgid "Could not fetch account status."
 msgstr ""
 
 #: assets/source/setup-guide/app/components/SaveSettingsButton.js:75
-#: assets/source/setup-guide/app/steps/SetupTracking.js:301
+#: assets/source/setup-guide/app/steps/SetupTracking.js:295
 msgid "The advertiser was connected successfully."
 msgstr ""
 
@@ -1237,7 +1237,7 @@ msgstr ""
 #: assets/source/setup-guide/app/steps/AdvancedSettings.js:36
 #: assets/source/setup-guide/app/steps/SetupPins.js:60
 #: assets/source/setup-guide/app/steps/SetupProductSync.js:36
-#: assets/source/setup-guide/app/steps/SetupTracking.js:236
+#: assets/source/setup-guide/app/steps/SetupTracking.js:88
 msgid "There was a problem saving your settings."
 msgstr ""
 
@@ -1499,11 +1499,11 @@ msgstr ""
 msgid "Erase Plugin Data"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/BillingStatus.js:21
+#: assets/source/setup-guide/app/steps/BillingStatus.js:20
 msgid "Billing status"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/BillingStatus.js:25
+#: assets/source/setup-guide/app/steps/BillingStatus.js:24
 msgid "A valid billing setup is necessary if you wish to advertise your products on Pinterest. You can set up and manage your billing through your account settings on Pinterest."
 msgstr ""
 
@@ -1535,12 +1535,12 @@ msgid "Verified"
 msgstr ""
 
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:180
-#: assets/source/setup-guide/app/steps/SetupTracking.js:273
+#: assets/source/setup-guide/app/steps/SetupTracking.js:267
 msgid "Try Again"
 msgstr ""
 
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:181
-#: assets/source/setup-guide/app/steps/SetupTracking.js:274
+#: assets/source/setup-guide/app/steps/SetupTracking.js:268
 msgid "Complete Setup"
 msgstr ""
 
@@ -1549,7 +1549,7 @@ msgid "Connected successfully."
 msgstr ""
 
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:221
-#: assets/source/setup-guide/app/steps/SetupTracking.js:320
+#: assets/source/setup-guide/app/steps/SetupTracking.js:314
 msgid "There was a problem connecting the advertiser."
 msgstr ""
 
@@ -1581,41 +1581,41 @@ msgstr ""
 msgid "As a new Pinterest customer, you can get %1$s in free ad credits when you successfully set up Pinterest for WooCommerce and spend %2$s on Pinterest Ads. <a>Pinterest Terms and conditions</a> apply."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:97
+#: assets/source/setup-guide/app/steps/SetupAccount.js:86
 msgid "Couldn’t retrieve your linked business accounts."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:109
+#: assets/source/setup-guide/app/steps/SetupAccount.js:108
 #: assets/source/setup-guide/app/views/WizardApp.js:59
 msgid "Set up your business account"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:113
+#: assets/source/setup-guide/app/steps/SetupAccount.js:112
 msgid "Step One"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:122
+#: assets/source/setup-guide/app/steps/SetupAccount.js:121
 msgid "Pinterest business account"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:126
+#: assets/source/setup-guide/app/steps/SetupAccount.js:125
 msgid "Linked account"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:132
+#: assets/source/setup-guide/app/steps/SetupAccount.js:131
 msgid "Set up a free Pinterest business account to get access to analytics on your Pins and the ability to run ads. This requires agreeing to our <adGuidelinesLink>advertising guidelines</adGuidelinesLink> and following our <merchantGuidelinesLink>merchant guidelines</merchantGuidelinesLink>."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:205
+#: assets/source/setup-guide/app/steps/SetupAccount.js:204
 msgid "Or, create a new Pinterest account"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:232
+#: assets/source/setup-guide/app/steps/SetupAccount.js:231
 msgid "Or, convert your personal account"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupAccount.js:244
-#: assets/source/setup-guide/app/steps/SetupTracking.js:272
+#: assets/source/setup-guide/app/steps/SetupAccount.js:243
+#: assets/source/setup-guide/app/steps/SetupTracking.js:266
 msgid "Continue"
 msgstr ""
 
@@ -1708,64 +1708,64 @@ msgstr ""
 msgid "Enable Product Sync"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:129
-msgid "Couldn’t retrieve your advertisers."
-msgstr ""
-
-#: assets/source/setup-guide/app/steps/SetupTracking.js:187
+#: assets/source/setup-guide/app/steps/SetupTracking.js:141
 msgid "Couldn’t retrieve your tags."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:332
-#: assets/source/setup-guide/app/steps/SetupTracking.js:349
+#: assets/source/setup-guide/app/steps/SetupTracking.js:198
+msgid "Couldn’t retrieve your advertisers."
+msgstr ""
+
+#: assets/source/setup-guide/app/steps/SetupTracking.js:326
+#: assets/source/setup-guide/app/steps/SetupTracking.js:343
 msgid "Track conversions with the Pinterest tag"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:336
+#: assets/source/setup-guide/app/steps/SetupTracking.js:330
 msgid "Step Three"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:345
+#: assets/source/setup-guide/app/steps/SetupTracking.js:339
 msgid "Select your advertiser and tag"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:357
+#: assets/source/setup-guide/app/steps/SetupTracking.js:351
 msgid "The <linkTag>Pinterest tag</linkTag> is a piece of JavaScript code you put on your website to gather conversion insights and build audiences to target based on actions people have taken on your site."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:380
+#: assets/source/setup-guide/app/steps/SetupTracking.js:374
 msgid "Using conversion tags means you agree to our <linkGuidelines>Ad Guidelines</linkGuidelines> and <linkTerms>Ad Data Terms</linkTerms>."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:416
+#: assets/source/setup-guide/app/steps/SetupTracking.js:410
 msgid "<linkAem>Automatic Enhanced Match</linkAem> is enabled by default to match more of your website visitors and conversions to people on Pinterest. You can manage this in Settings."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:451
+#: assets/source/setup-guide/app/steps/SetupTracking.js:445
 msgid "Advertiser"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:475
+#: assets/source/setup-guide/app/steps/SetupTracking.js:469
 msgid "Select the advertiser for which you would like to install a tracking snippet."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:488
+#: assets/source/setup-guide/app/steps/SetupTracking.js:482
 msgid "Tracking Tag"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:516
+#: assets/source/setup-guide/app/steps/SetupTracking.js:510
 msgid "Select the tracking tag to use."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:533
+#: assets/source/setup-guide/app/steps/SetupTracking.js:527
 msgid "In order to proceed you need to read and accept the contents of the Pinterest Advertising Agreement."
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:541
+#: assets/source/setup-guide/app/steps/SetupTracking.js:535
 msgid "I accept the <link>Pinterest Advertising Agreement</link>"
 msgstr ""
 
-#: assets/source/setup-guide/app/steps/SetupTracking.js:587
+#: assets/source/setup-guide/app/steps/SetupTracking.js:581
 msgid "An error occurred while attempting to fetch Advertisers & Tags from Pinterest. Please try again."
 msgstr ""
 
@@ -1851,6 +1851,14 @@ msgstr ""
 #: assets/source/setup-guide/app/views/LandingPageApp.js:328
 #, js-format
 msgid "To be eligible and redeem the %1$s ad credit from Pinterest, you must complete the setup of Pinterest for WooCommerce, set up your billing with Pinterest Ads manager, and spend %2$s with Pinterest ads. Ad credits may vary by country and is subject to availability. Credits may take up to 24 hours to be credited to the user. Each user is only eligible to receive the ad credits once."
+msgstr ""
+
+#: assets/source/setup-guide/app/views/SettingsApp.js:64
+msgid "Retry"
+msgstr ""
+
+#: assets/source/setup-guide/app/views/SettingsApp.js:69
+msgid "Could not load your Pinterest settings. Please try again."
 msgstr ""
 
 #: assets/source/setup-guide/index.js:47
