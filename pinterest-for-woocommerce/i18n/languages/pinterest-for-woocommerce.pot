@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pinterest for WooCommerce 1.5.2\n"
+"Project-Id-Version: Pinterest for WooCommerce 1.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pinterest-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-07T14:26:47+00:00\n"
+"POT-Creation-Date: 2026-10-09T09:51:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pinterest-for-woocommerce\n"
@@ -41,62 +41,62 @@ msgstr ""
 msgid "https://woocommerce.com"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:171
+#: class-pinterest-for-woocommerce.php:180
 msgid "Cloning this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:180
+#: class-pinterest-for-woocommerce.php:189
 msgid "Deserializing instances of this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:188
+#: class-pinterest-for-woocommerce.php:197
 msgid "Only a single instance of this class is allowed. Use singleton."
 msgstr ""
 
 #. Translators: The minimum PHP version
-#: class-pinterest-for-woocommerce.php:434
+#: class-pinterest-for-woocommerce.php:443
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum PHP version of %s."
 msgstr ""
 
 #. Translators: The minimum WP version
-#: class-pinterest-for-woocommerce.php:439
+#: class-pinterest-for-woocommerce.php:448
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WordPress version of %s."
 msgstr ""
 
 #. Translators: The minimum WC version
-#: class-pinterest-for-woocommerce.php:444
+#: class-pinterest-for-woocommerce.php:453
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WooCommerce version of %s."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:452
+#: class-pinterest-for-woocommerce.php:461
 msgid "Pinterest for WooCommerce requires WooCommerce Admin to be enabled."
 msgstr ""
 
 #. Translators: The minimum Action Scheduler version
-#: class-pinterest-for-woocommerce.php:457
+#: class-pinterest-for-woocommerce.php:466
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum Action Scheduler package of %s. It can be caused by old version of the WooCommerce extensions."
 msgstr ""
 
 #. Translators: The error description
-#: class-pinterest-for-woocommerce.php:764
+#: class-pinterest-for-woocommerce.php:773
 #: src/API/TokenExchangeV3ToV5.php:122
 #, php-format
 msgid "Could not decrypt the Pinterest API access token. Try reconnecting to Pinterest. [%s]"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:977
+#: class-pinterest-for-woocommerce.php:1045
 msgid "Commerce Integration cannot be created: Advertiser ID is missing."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1081
+#: class-pinterest-for-woocommerce.php:1149
 msgid "There was an error getting the account data."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1302
+#: class-pinterest-for-woocommerce.php:1370
 msgid "Pinterest for WooCommerce verification page"
 msgstr ""
 
