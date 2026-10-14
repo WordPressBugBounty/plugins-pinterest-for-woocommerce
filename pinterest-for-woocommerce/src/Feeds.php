@@ -22,6 +22,9 @@ use Throwable;
 
 /**
  * Class handling fetch methods for feed profiles.
+ *
+ * @class   Feeds
+ * @version 1.5.4
  */
 class Feeds {
 
@@ -427,9 +430,11 @@ class Feeds {
 	 *
 	 * @throws PinterestApiException Pinterest API Exception.
 	 * @since 1.2.13
-	 * @deprecated
+	 * @deprecated 1.5.4 Use get_feed() and check the returned feed's status.
 	 */
 	public static function is_local_feed_enabled( string $feed_id ): bool {
+		wc_deprecated_function( __METHOD__, '1.5.4' );
+
 		if ( empty( $feed_id ) ) {
 			return false;
 		}
