@@ -17,7 +17,7 @@ use Automattic\WooCommerce\Pinterest\View\ViewFactory;
  * Class Admin
  *
  * @class   Admin
- * @version 1.0.4
+ * @version 1.6.0
  */
 class Admin {
 
@@ -53,6 +53,8 @@ class Admin {
 
 	/**
 	 * Enqueues any assets.
+	 *
+	 * @return void
 	 */
 	protected function enqueue_assets() {
 		$screen = get_current_screen();

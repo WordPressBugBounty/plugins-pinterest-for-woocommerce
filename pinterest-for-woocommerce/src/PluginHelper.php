@@ -13,7 +13,7 @@ namespace Automattic\WooCommerce\Pinterest;
  * Trait PluginHelper
  *
  * @class   PluginHelper
- * @version 1.5.2
+ * @version 1.6.0
  */
 trait PluginHelper {
 
@@ -60,7 +60,7 @@ trait PluginHelper {
 	/**
 	 * Helper method to return the onboarding page parameters.
 	 *
-	 * @return array The onboarding page parameters.
+	 * @return array<string, string> The onboarding page parameters.
 	 */
 	protected function onboarding_page_parameters(): array {
 

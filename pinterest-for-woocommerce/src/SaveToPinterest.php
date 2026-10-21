@@ -18,12 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class adding Save Pin support.
  *
  * @class   SaveToPinterest
- * @version 1.5.4
+ * @version 1.6.0
  */
 class SaveToPinterest {
 
 	/**
 	 * Initiate class.
+	 *
+	 * @return void
 	 */
 	public static function maybe_init() {
 
@@ -44,6 +46,7 @@ class SaveToPinterest {
 	 * Show Product Pin HTML.
 	 *
 	 * @since 1.0.0
+	 * @return void
 	 */
 	public static function render_product_pin() {
 
@@ -138,12 +141,12 @@ class SaveToPinterest {
 	 * @param Object      $data Data passed to the filter.
 	 * @param \WC_Product $product The product object.
 	 *
-	 * @return bool
+	 * @return string
 	 */
 	public static function add_to_wc_blocks( $html, $data, $product ) {
 
 		if ( empty( $product ) ) {
-			return;
+			return $html;
 		}
 
 		return str_replace( '</li>', self::render_pin( $product->get_id() ) . '</li>', $html );

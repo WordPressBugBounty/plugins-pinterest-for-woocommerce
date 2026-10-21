@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Base API Methods
  *
  * @class   Base
- * @version 1.5.2
+ * @version 1.6.0
  */
 class Base {
 
@@ -33,7 +33,7 @@ class Base {
 	/**
 	 * Holds the instance of the class.
 	 *
-	 * @var Base
+	 * @var Base|null
 	 */
 	protected static $instance = null;
 
@@ -41,7 +41,7 @@ class Base {
 	/**
 	 * The token as saved in the settings.
 	 *
-	 * @var array
+	 * @var array|null
 	 */
 	protected static $token = null;
 
@@ -54,6 +54,8 @@ class Base {
 
 	/**
 	 * Initialize and/or return the instance
+	 *
+	 * @return Base
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
@@ -77,7 +79,7 @@ class Base {
 	 * @param string    $api             The specific Endpoints subset.
 	 * @param int|false $cache_expiry    When set, enables caching on the request and the value is used as the cache's TTL (in seconds).
 	 *
-	 * @return array
+	 * @return mixed Decoded JSON response body: usually an array, null when the body is empty or is not valid JSON.
 	 *
 	 * @throws PinterestApiException Pinterest API exception in case of API error in response.
 	 */
@@ -211,12 +213,12 @@ class Base {
 	 * Caches the API response if cache expiry is set.
 	 *
 	 * @since 1.3.8
-	 * @param string $endpoint     The API endpoint.
-	 * @param string $method       The HTTP method.
-	 * @param array  $payload      The API request payload.
-	 * @param string $api          The API version.
-	 * @param mixed  $response     The API response.
-	 * @param int    $cache_expiry The cache expiry in seconds.
+	 * @param string    $endpoint     The API endpoint.
+	 * @param string    $method       The HTTP method.
+	 * @param array     $payload      The API request payload.
+	 * @param string    $api          The API version.
+	 * @param mixed     $response     The API response.
+	 * @param int|false $cache_expiry The cache expiry in seconds, or false to skip caching.
 	 *
 	 * @return void
 	 */
@@ -258,7 +260,7 @@ class Base {
 	 *
 	 * @param array $request (See above).
 	 *
-	 * @return array
+	 * @return mixed Decoded JSON response body: usually an array, null when the body is empty or is not valid JSON.
 	 *
 	 * @throws PinterestApiException Pinterest API exception in case of API error during response or problems with request.
 	 */
@@ -345,7 +347,7 @@ class Base {
 	 *
 	 * @param mixed $response The response to parse.
 	 *
-	 * @return array
+	 * @return mixed Decoded JSON response body: usually an array, null when the body is empty or is not valid JSON.
 	 *
 	 * @throws Exception PHP exception.
 	 */

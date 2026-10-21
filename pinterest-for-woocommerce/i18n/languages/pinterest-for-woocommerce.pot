@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pinterest for WooCommerce 1.5.4\n"
+"Project-Id-Version: Pinterest for WooCommerce 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pinterest-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-14T11:53:53+00:00\n"
+"POT-Creation-Date: 2026-10-21T10:55:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pinterest-for-woocommerce\n"
@@ -41,62 +41,62 @@ msgstr ""
 msgid "https://woocommerce.com"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:183
+#: class-pinterest-for-woocommerce.php:184
 msgid "Cloning this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:192
+#: class-pinterest-for-woocommerce.php:193
 msgid "Deserializing instances of this class is forbidden."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:200
+#: class-pinterest-for-woocommerce.php:203
 msgid "Only a single instance of this class is allowed. Use singleton."
 msgstr ""
 
 #. Translators: The minimum PHP version
-#: class-pinterest-for-woocommerce.php:446
+#: class-pinterest-for-woocommerce.php:463
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum PHP version of %s."
 msgstr ""
 
 #. Translators: The minimum WP version
-#: class-pinterest-for-woocommerce.php:451
+#: class-pinterest-for-woocommerce.php:468
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WordPress version of %s."
 msgstr ""
 
 #. Translators: The minimum WC version
-#: class-pinterest-for-woocommerce.php:456
+#: class-pinterest-for-woocommerce.php:473
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum WooCommerce version of %s."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:464
+#: class-pinterest-for-woocommerce.php:481
 msgid "Pinterest for WooCommerce requires WooCommerce Admin to be enabled."
 msgstr ""
 
 #. Translators: The minimum Action Scheduler version
-#: class-pinterest-for-woocommerce.php:469
+#: class-pinterest-for-woocommerce.php:486
 #, php-format
 msgid "Pinterest for WooCommerce requires a minimum Action Scheduler package of %s. It can be caused by old version of the WooCommerce extensions."
 msgstr ""
 
 #. Translators: The error description
-#: class-pinterest-for-woocommerce.php:776
+#: class-pinterest-for-woocommerce.php:796
 #: src/API/TokenExchangeV3ToV5.php:128
 #, php-format
 msgid "Could not decrypt the Pinterest API access token. Try reconnecting to Pinterest. [%s]"
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1048
+#: class-pinterest-for-woocommerce.php:1069
 msgid "Commerce Integration cannot be created: Advertiser ID is missing."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1152
+#: class-pinterest-for-woocommerce.php:1176
 msgid "There was an error getting the account data."
 msgstr ""
 
-#: class-pinterest-for-woocommerce.php:1373
+#: class-pinterest-for-woocommerce.php:1403
 msgid "Pinterest for WooCommerce verification page"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Landing page"
 msgstr ""
 
-#: includes/admin/class-pinterest-for-woocommerce-admin.php:513
+#: includes/admin/class-pinterest-for-woocommerce-admin.php:517
 msgid "Cheatin' huh?"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgid "Your installation of the Pinterest for WooCommerce plugin is incomplete. 
 msgstr ""
 
 #. translators: API error message
-#: src/AdCredits.php:232
+#: src/AdCredits.php:233
 #, php-format
 msgid "Could not fetch ads campaign status due to: %s"
 msgstr ""
@@ -159,11 +159,11 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: src/Admin/Product/Attributes/AttributesTab.php:191
+#: src/Admin/Product/Attributes/AttributesTab.php:194
 msgid "Simple product"
 msgstr ""
 
-#: src/Admin/Product/Attributes/AttributesTab.php:192
+#: src/Admin/Product/Attributes/AttributesTab.php:195
 msgid "Variable product"
 msgstr ""
 
@@ -207,8 +207,8 @@ msgstr ""
 msgid "Commerce integration update error: $1%s"
 msgstr ""
 
-#: src/API/AdvertiserConnect.php:163
-#: src/API/AdvertiserConnect.php:175
+#: src/API/AdvertiserConnect.php:164
+#: src/API/AdvertiserConnect.php:176
 msgid "The advertiser could not be disconnected from Pinterest."
 msgstr ""
 
@@ -218,24 +218,28 @@ msgstr ""
 msgid "Could not fetch advertisers for Pinterest account ID. [%s]"
 msgstr ""
 
+#: src/API/APIV5.php:422
+msgid "Empty commerce integration response."
+msgstr ""
+
 #: src/API/Auth.php:84
 msgid "Something went wrong with your attempt to authorize this App. Please try again."
 msgstr ""
 
-#: src/API/Auth.php:114
+#: src/API/Auth.php:115
 msgid "Token data missing, please try again later."
 msgstr ""
 
-#: src/API/Auth.php:119
+#: src/API/Auth.php:120
 msgid "Connection information missing, please try again later."
 msgstr ""
 
-#: src/API/Auth.php:149
+#: src/API/Auth.php:150
 msgid "There was an error getting the account data. Please try again later."
 msgstr ""
 
 #. Translators: 1: Request method 2: Request endpoint 3: Response status code 4: Response message 5: Pinterest code
-#: src/API/Base.php:102
+#: src/API/Base.php:104
 #, php-format
 msgid ""
 "%1$s Request: %2$s\n"
@@ -245,17 +249,17 @@ msgid ""
 msgstr ""
 
 #. translators: Empty error body exception.
-#: src/API/Base.php:303
+#: src/API/Base.php:305
 #, php-format
 msgid "Response body processing error: $1%s"
 msgstr ""
 
-#: src/API/Base.php:355
+#: src/API/Base.php:357
 msgid "Empty body"
 msgstr ""
 
-#: src/API/Base.php:430
-#: src/API/Base.php:815
+#: src/API/Base.php:432
+#: src/API/Base.php:817
 #: src/Merchants.php:144
 msgid "Auto-created by Pinterest for WooCommerce"
 msgstr ""
@@ -274,156 +278,156 @@ msgstr ""
 msgid "(Variation)"
 msgstr ""
 
-#: src/API/FeedState.php:95
-#: src/API/FeedState.php:211
+#: src/API/FeedState.php:97
+#: src/API/FeedState.php:213
 msgid "XML feed"
 msgstr ""
 
-#: src/API/FeedState.php:97
+#: src/API/FeedState.php:99
 msgid "Product sync is disabled."
 msgstr ""
 
 #. Translators: The error description as returned from the API
-#: src/API/FeedState.php:127
+#: src/API/FeedState.php:129
 #, php-format
 msgid "Error getting feed's state. [%s]"
 msgstr ""
 
-#: src/API/FeedState.php:150
+#: src/API/FeedState.php:152
 msgid "Feed generation in progress."
 msgstr ""
 
 #. translators: 1: Time string, 2: number of products, 3: opening anchor tag, 4: closing anchor tag
-#: src/API/FeedState.php:154
+#: src/API/FeedState.php:156
 #, php-format
 msgid "Last activity: %1$s ago - Wrote %2$s product to %3$sfeed file%4$s."
 msgid_plural "Last activity: %1$s ago - Wrote %2$s products to %3$sfeed file%4$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/API/FeedState.php:170
+#: src/API/FeedState.php:172
 msgid "Up to date"
 msgstr ""
 
 #. translators: 1: Time string, 2: total number of products, 3: opening anchor tag, 4: closing anchor tag
-#: src/API/FeedState.php:174
+#: src/API/FeedState.php:176
 #, php-format
 msgid "Successfully generated %1$s ago - Wrote %2$s product to %3$sfeed file%4$s"
 msgid_plural "Successfully generated %1$s ago - Wrote %2$s products to %3$sfeed file%4$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/API/FeedState.php:190
+#: src/API/FeedState.php:192
 msgid "Feed generation will start shortly."
 msgstr ""
 
-#: src/API/FeedState.php:195
+#: src/API/FeedState.php:197
 msgid "Feed configuration will start shortly."
 msgstr ""
 
-#: src/API/FeedState.php:200
+#: src/API/FeedState.php:202
 msgid "Could not get feed info."
 msgstr ""
 
 #. Translators: %1$s Time string, %2$s error message
-#: src/API/FeedState.php:203
+#: src/API/FeedState.php:205
 #, php-format
 msgid "Last activity: %1$s ago - %2$s"
 msgstr ""
 
-#: src/API/FeedState.php:235
-#: src/API/FeedState.php:243
+#: src/API/FeedState.php:237
+#: src/API/FeedState.php:245
 msgid "Product feed not yet configured on Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:251
+#: src/API/FeedState.php:253
 msgid "Product feed declined by Pinterest"
 msgstr ""
 
-#: src/API/FeedState.php:263
+#: src/API/FeedState.php:265
 msgid "Product feed configured for ingestion on Pinterest"
 msgstr ""
 
-#: src/API/FeedState.php:272
+#: src/API/FeedState.php:274
 msgid "Product feed pending approval on Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:276
+#: src/API/FeedState.php:278
 msgid "Remote feed setup"
 msgstr ""
 
-#: src/API/FeedState.php:304
+#: src/API/FeedState.php:306
 msgid "Pinterest tag"
 msgstr ""
 
-#: src/API/FeedState.php:306
-#: src/API/FeedState.php:335
+#: src/API/FeedState.php:308
+#: src/API/FeedState.php:337
 msgid "Potential conflicting plugins"
 msgstr ""
 
-#: src/API/FeedState.php:333
+#: src/API/FeedState.php:335
 msgid "Pinterest Rich Pins"
 msgstr ""
 
-#: src/API/FeedState.php:364
+#: src/API/FeedState.php:366
 msgid "Feed report from Pinterest contains no information."
 msgstr ""
 
-#: src/API/FeedState.php:377
+#: src/API/FeedState.php:379
 msgid "Remote sync status"
 msgstr ""
 
-#: src/API/FeedState.php:423
+#: src/API/FeedState.php:425
 msgid "Processing completed"
 msgstr ""
 
-#: src/API/FeedState.php:425
+#: src/API/FeedState.php:427
 msgid "Feed is disapproved by Pinterest."
 msgstr ""
 
-#: src/API/FeedState.php:427
+#: src/API/FeedState.php:429
 msgid "Processing failed"
 msgstr ""
 
-#: src/API/FeedState.php:429
+#: src/API/FeedState.php:431
 msgid "Processing"
 msgstr ""
 
-#: src/API/FeedState.php:431
+#: src/API/FeedState.php:433
 msgid "The feed is queued for processing."
 msgstr ""
 
-#: src/API/FeedState.php:433
+#: src/API/FeedState.php:435
 msgid "Feed is under appeal."
 msgstr ""
 
-#: src/API/FeedState.php:435
+#: src/API/FeedState.php:437
 msgid "Feed is under review."
 msgstr ""
 
-#: src/API/FeedState.php:437
+#: src/API/FeedState.php:439
 msgid "Unknown processing result status."
 msgstr ""
 
 #. Translators: %1$s Time difference string, %2$s number of products
-#: src/API/FeedState.php:462
+#: src/API/FeedState.php:468
 #, php-format
 msgid "%1$s ago, containing %2$d products"
 msgstr ""
 
 #. Translators: %1$s Time difference string
-#: src/API/FeedState.php:469
+#: src/API/FeedState.php:475
 #, php-format
 msgid "%1$s ago"
 msgstr ""
 
 #. Translators: %1$s Time difference string, %2$s number of products
-#: src/API/FeedState.php:477
+#: src/API/FeedState.php:483
 msgid "Overview numbers may be inaccurate until processing finishes."
 msgstr ""
 
 #. Translators: The status text returned by the API.
-#: src/API/FeedState.php:487
+#: src/API/FeedState.php:493
 #, php-format
 msgid "Pinterest returned an unknown feed status: %1$s"
 msgstr ""
@@ -441,16 +445,17 @@ msgid "Advertiser missing"
 msgstr ""
 
 #: src/API/Tags.php:59
-#: src/PinterestSyncSettings.php:122
+#: src/API/Tags.php:64
+#: src/PinterestSyncSettings.php:124
 msgid "Response error"
 msgstr ""
 
-#: src/API/Tags.php:68
+#: src/API/Tags.php:73
 msgid "Could not create a tag. Please check the logs for additional information."
 msgstr ""
 
 #. Translators: The error description as returned from the API
-#: src/API/Tags.php:83
+#: src/API/Tags.php:88
 #, php-format
 msgid "No tracking tag available. [%s]"
 msgstr ""
@@ -494,8 +499,8 @@ msgstr ""
 msgid "Commerce Integration Sync has failed with Pinterest code %1$s and the message %2$s. Next attempt in a week."
 msgstr ""
 
-#: src/Crypto.php:98
-#: src/Crypto.php:142
+#: src/Crypto.php:99
+#: src/Crypto.php:151
 msgid "Could not decrypt key value. Try reconnecting to Pinterest."
 msgstr ""
 
@@ -518,114 +523,114 @@ msgid "Could not rename %1$s to %2$s"
 msgstr ""
 
 #. Translators: Action Scheduler hook name.
-#: src/FeedGenerator.php:212
+#: src/FeedGenerator.php:213
 #, php-format
 msgid "Feed Generator `%s` Action from a superseded generation cycle timed out. Not rescheduling."
 msgstr ""
 
 #. Translators: 1. Action Scheduler hook name.
-#: src/FeedGenerator.php:227
+#: src/FeedGenerator.php:228
 #, php-format
 msgid "Feed Generator `%s` Action reschedule threshold has been reached. Quit."
 msgstr ""
 
 #. Translators: Action Scheduler hook name.
-#: src/FeedGenerator.php:257
+#: src/FeedGenerator.php:258
 #, php-format
 msgid "Feed Generator `%s` Action retry already scheduled. Skipping duplicate."
 msgstr ""
 
 #. Translators: Action Scheduler hook name.
-#: src/FeedGenerator.php:270
+#: src/FeedGenerator.php:271
 #, php-format
 msgid "Feed Generator `%s` Action timed out due to an unexpected shutdown. Rescheduling it."
 msgstr ""
 
 #. Translators: 1: Action Scheduler hook name, 2: New products number to process next action run.
-#: src/FeedGenerator.php:287
+#: src/FeedGenerator.php:288
 #, php-format
 msgid "Feed Generator `%1$s` Action product batch size decreased to %2$d."
 msgstr ""
 
-#: src/FeedGenerator.php:322
+#: src/FeedGenerator.php:323
 msgid "Feed Generator action from a superseded generation cycle failed. Ignoring the stale failure."
 msgstr ""
 
 #. translators: time in the format hours:minutes:seconds
-#: src/FeedGenerator.php:339
+#: src/FeedGenerator.php:341
 #, php-format
 msgid "Feed scheduled to run at %s."
 msgstr ""
 
-#: src/FeedGenerator.php:359
+#: src/FeedGenerator.php:364
 msgid "Feed generation is already active. Skipping the start."
 msgstr ""
 
-#: src/FeedGenerator.php:365
+#: src/FeedGenerator.php:370
 msgid "Feed generation queued."
 msgstr ""
 
-#: src/FeedGenerator.php:376
+#: src/FeedGenerator.php:382
 msgid "Feed generation start. Preparing temporary files."
 msgstr ""
 
-#: src/FeedGenerator.php:409
+#: src/FeedGenerator.php:416
 msgid "Another feed generation start is in progress. Marked the feed dirty to regenerate afterward."
 msgstr ""
 
-#: src/FeedGenerator.php:416
+#: src/FeedGenerator.php:423
 msgid "Feed generation is already running. Marked the feed dirty to regenerate when the current cycle finishes."
 msgstr ""
 
 #. translators: feed generation cycle ID
-#: src/FeedGenerator.php:427
+#: src/FeedGenerator.php:434
 #, php-format
 msgid "Starting feed generation cycle `%s`."
 msgstr ""
 
 #. Translators: batch number.
-#: src/FeedGenerator.php:463
+#: src/FeedGenerator.php:471
 #, php-format
 msgid "Feed Generator batch #%d belongs to a superseded generation cycle. Skipping."
 msgstr ""
 
-#: src/FeedGenerator.php:494
+#: src/FeedGenerator.php:503
 msgid "Feed Generator end action belongs to a superseded generation cycle. Skipping."
 msgstr ""
 
-#: src/FeedGenerator.php:510
+#: src/FeedGenerator.php:520
 msgid "Feed generation end. Moving files to the final destination."
 msgstr ""
 
-#: src/FeedGenerator.php:525
+#: src/FeedGenerator.php:535
 msgid "Feed generated successfully."
 msgstr ""
 
 #. Translators: 1: batch limit, 2: filter name.
-#: src/FeedGenerator.php:562
+#: src/FeedGenerator.php:572
 #, php-format
 msgid "Feed generation truncated: maximum batch limit of %1$d reached. Use the `%2$s` filter to increase the limit."
 msgstr ""
 
 #. translators: number of products
-#: src/FeedGenerator.php:655
+#: src/FeedGenerator.php:666
 #, php-format
 msgid "Feed batch generated. Wrote %s products to the feed file."
 msgstr ""
 
 #. Translators: 1: Action Scheduler hook name, 2: Error message about why action has failed to execute.
-#: src/FeedGenerator.php:849
+#: src/FeedGenerator.php:860
 #, php-format
 msgid "Feed Generator `%1$s` Action stopped: `%2$s`. No automatic retry scheduled; raise the batch limit filter to resume."
 msgstr ""
 
 #. Translators: 1: Action Scheduler hook name, 2: Error message about why action has failed to execute.
-#: src/FeedGenerator.php:865
+#: src/FeedGenerator.php:876
 #, php-format
 msgid "Feed Generator `%1$s` Action failed to execute due to an error thrown `%2$s.`. A complete feed generation retry has been scheduled."
 msgstr ""
 
-#: src/FeedGenerator.php:1233
+#: src/FeedGenerator.php:1244
 msgid "Failed to count published products for the feed circuit breaker recommendation."
 msgstr ""
 
@@ -636,9 +641,13 @@ msgid "Created by Pinterest for WooCommerce at %1$s %2$s|%3$s|%4$s"
 msgstr ""
 
 #. translators: Pinterest API error code and message. 1: Cached error string.
-#: src/Feeds.php:154
+#: src/Feeds.php:157
 #, php-format
 msgid "Previous request for the same action failed due to: %1$s. Delaying the next call to prevent repeating errors."
+msgstr ""
+
+#: src/Feeds.php:320
+msgid "Pinterest repeated a feed page cursor, so the feed list is incomplete."
 msgstr ""
 
 #. Translators: The error message as returned by the Pinterest API
@@ -748,7 +757,7 @@ msgid "Go to Catalog Sync"
 msgstr ""
 
 #: src/Notes/FeedCircuitBreakerNote.php:68
-#: src/Notes/FeedDeletionFailure.php:92
+#: src/Notes/FeedDeletionFailure.php:96
 msgid "Dismiss"
 msgstr ""
 
@@ -758,7 +767,7 @@ msgstr ""
 msgid "The Pinterest For WooCommerce plugin has failed to delete the feed.<br/>%1$s<br/>Please, contact Pinterest support to resolve the issue."
 msgstr ""
 
-#: src/Notes/FeedDeletionFailure.php:83
+#: src/Notes/FeedDeletionFailure.php:87
 msgid "Pinterest For WooCommerce Feed Deletion Failed."
 msgstr ""
 
@@ -778,11 +787,11 @@ msgstr ""
 msgid "Re-authenticate with Pinterest"
 msgstr ""
 
-#: src/PinterestSyncSettings.php:86
+#: src/PinterestSyncSettings.php:88
 msgid "Missing method to sync the setting."
 msgstr ""
 
-#: src/PinterestSyncSettings.php:114
+#: src/PinterestSyncSettings.php:116
 msgid "Tracking advertiser or tag missing"
 msgstr ""
 
@@ -817,42 +826,42 @@ msgid "The product [%s] has a description longer than the allowed limit."
 msgstr ""
 
 #. translators: 1: The URL of the connection page
-#: src/ProductSync.php:214
+#: src/ProductSync.php:219
 #, php-format
 msgid "The domain is not verified, visit the <a href=\"%1$s\">connection</a> page to verify it."
 msgstr ""
 
 #. translators: 1: The URL of the connection page
-#: src/ProductSync.php:230
+#: src/ProductSync.php:235
 #, php-format
 msgid "The tracking tag is not configured, visit the <a href=\"%1$s\">connection</a> page to configure it."
 msgstr ""
 
 #. translators: 1: The URL of the settings page
-#: src/ProductSync.php:245
+#: src/ProductSync.php:250
 #, php-format
 msgid "Visit the <a href=\"%1$s\">settings</a> page to enable it."
 msgstr ""
 
 #. Translators: %s is the endpoint.
-#: src/RefreshToken.php:108
+#: src/RefreshToken.php:109
 #, php-format
 msgid "Refresh token request to %s."
 msgstr ""
 
 #. Translators: 1: Conflicting plugins, 2: Plugins Admin page opening tag, 3: Pinterest settings opening tag, 4: Closing anchor tag
-#: src/RichPins.php:319
+#: src/RichPins.php:320
 #, php-format
 msgid "The following installed plugin(s) can potentially cause problems with Rich Pins: %1$s. %2$sRemove conflicting plugins%4$s or %3$smanage Rich Pins settings%4$s."
 msgstr ""
 
 #. translators: %s: product name
-#: src/SaveToPinterest.php:75
+#: src/SaveToPinterest.php:78
 #, php-format
 msgid "%s to Pinterest"
 msgstr ""
 
-#: src/SaveToPinterest.php:80
+#: src/SaveToPinterest.php:83
 msgid "(opens in a new window)"
 msgstr ""
 
@@ -865,8 +874,8 @@ msgid ""
 msgstr ""
 
 #. translators: 1. the error message as returned by the Pinterest API
-#: src/Tracking/Conversions.php:455
 #: src/Tracking/Conversions.php:468
+#: src/Tracking/Conversions.php:481
 #, php-format
 msgid "Error: $1%s"
 msgstr ""
@@ -974,8 +983,18 @@ msgstr ""
 msgid "Spend %1$s to claim %2$s in Pinterest ad credits. To claim the credits, <adsBillingDetails>add your billing details.</adsBillingDetails>"
 msgstr ""
 
+#: assets/source/catalog-sync/sections/SyncIssues.js:53
+#: assets/source/catalog-sync/sections/SyncState.js:79
+#: assets/source/setup-guide/app/steps/ClaimWebsite.js:158
+msgid "Try again"
+msgstr ""
+
+#: assets/source/catalog-sync/sections/SyncIssues.js:59
+msgid "Unable to load catalog issues."
+msgstr ""
+
 #. translators: %1$s: Total number of issues in the table.
-#: assets/source/catalog-sync/sections/SyncIssues.js:63
+#: assets/source/catalog-sync/sections/SyncIssues.js:90
 #, js-format
 msgid "Only the first %1$s Errors and Warnings are displayed below. To see more, please, visit <feedDiagnostics>Pinterest Feed Diagnostics</feedDiagnostics> page."
 msgstr ""
@@ -1001,16 +1020,20 @@ msgid "Issues"
 msgstr ""
 
 #. translators: %s credits value with currency formatted using wc_price
-#: assets/source/catalog-sync/sections/SyncState.js:50
+#: assets/source/catalog-sync/sections/SyncState.js:56
 #, js-format
 msgid "You have %s of free ad credits left to use"
 msgstr ""
 
-#: assets/source/catalog-sync/sections/SyncState.js:64
+#: assets/source/catalog-sync/sections/SyncState.js:70
 msgid "Overview"
 msgstr ""
 
-#: assets/source/catalog-sync/sections/SyncState.js:78
+#: assets/source/catalog-sync/sections/SyncState.js:88
+msgid "Unable to load the catalog overview."
+msgstr ""
+
+#: assets/source/catalog-sync/sections/SyncState.js:108
 msgid "Create ads to increase your reach with the <adsManagerLink>Pinterest ads manager</adsManagerLink>"
 msgstr ""
 
@@ -1139,39 +1162,35 @@ msgstr ""
 msgid "Improve your conversion tracking"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:88
-msgid "Pinterest connection illustration"
-msgstr ""
-
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:100
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:97
 msgid "Enable Pinterest Conversions API for more reliable conversion tracking. This helps you better measure ad campaign success, optimize your marketing strategies, and understand customer behavior. Benefits:"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:115
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:112
 msgid "More complete conversion data"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:121
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:118
 msgid "Better campaign optimization"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:127
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:124
 msgid "Improved audience targeting"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:133
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:130
 msgid "Reduced impact from browser limitations"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:146
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:143
 msgid "Not now"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:155
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:152
 msgid "Enabling…"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/CapiEnablementModal.js:156
+#: assets/source/setup-guide/app/components/CapiEnablementModal.js:153
 msgid "Enable Conversions API"
 msgstr ""
 
@@ -1249,23 +1268,23 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/SyncSettings/index.js:42
+#: assets/source/setup-guide/app/components/SyncSettings/index.js:49
 msgid "Settings successfully synced with Pinterest Ads Manager."
 msgstr ""
 
-#: assets/source/setup-guide/app/components/SyncSettings/index.js:53
+#: assets/source/setup-guide/app/components/SyncSettings/index.js:60
 msgid "Failed to sync settings with Pinterest Ads Manager."
 msgstr ""
 
-#: assets/source/setup-guide/app/components/SyncSettings/index.js:91
+#: assets/source/setup-guide/app/components/SyncSettings/index.js:94
 msgid "Syncing settings"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/SyncSettings/index.js:99
+#: assets/source/setup-guide/app/components/SyncSettings/index.js:102
 msgid "Sync to get latest settings from Pinterest Ads Manager"
 msgstr ""
 
-#: assets/source/setup-guide/app/components/SyncSettings/index.js:104
+#: assets/source/setup-guide/app/components/SyncSettings/index.js:107
 msgid "Sync"
 msgstr ""
 
@@ -1524,10 +1543,6 @@ msgstr ""
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:157
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:197
 msgid "Verifying…"
-msgstr ""
-
-#: assets/source/setup-guide/app/steps/ClaimWebsite.js:158
-msgid "Try again"
 msgstr ""
 
 #: assets/source/setup-guide/app/steps/ClaimWebsite.js:159

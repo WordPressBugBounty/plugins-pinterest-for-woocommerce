@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class handling Woo Tracker
  *
  * @class   TrackerSnapshot
- * @version 1.4.3
+ * @version 1.6.0
  */
 class TrackerSnapshot {
 
@@ -69,7 +69,7 @@ class TrackerSnapshot {
 			),
 			'feed'     => array(
 				'generation_time' => $feed_generation_time,
-				'product_count'   => (int) ProductFeedStatus::get()[ ProductFeedStatus::PROP_FEED_GENERATION_RECENT_PRODUCT_COUNT ] ?? 0,
+				'product_count'   => (int) ( ProductFeedStatus::get()[ ProductFeedStatus::PROP_FEED_GENERATION_RECENT_PRODUCT_COUNT ] ?? 0 ),
 			),
 		);
 
@@ -79,7 +79,7 @@ class TrackerSnapshot {
 	/**
 	 * Parse general extension and settings data in the required format.
 	 *
-	 * @return array
+	 * @return array<string, string>
 	 */
 	protected static function parse_settings(): array {
 		$settings = Pinterest_For_Woocommerce()::get_settings( true );

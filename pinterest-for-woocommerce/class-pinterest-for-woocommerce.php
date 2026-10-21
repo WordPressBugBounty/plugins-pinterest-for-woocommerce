@@ -8,6 +8,7 @@
 
 use Automattic\WooCommerce\Grow\Tools\CompatChecker\v0_0_1\Checker;
 use Automattic\WooCommerce\Admin\Features\OnboardingTasks\TaskLists;
+use Automattic\WooCommerce\Admin\Marketing\MarketingChannels;
 use Automattic\WooCommerce\Admin\Notes\NotesUnavailableException;
 use Automattic\WooCommerce\Pinterest;
 use Automattic\WooCommerce\Pinterest\AdCredits;
@@ -41,7 +42,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 	 * Base Plugin class holding generic functionality
 	 *
 	 * @class   Pinterest_For_Woocommerce
-	 * @version 1.5.4
+	 * @version 1.6.0
 	 */
 	final class Pinterest_For_Woocommerce {
 
@@ -97,7 +98,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		/**
 		 * The single instance of the class.
 		 *
-		 * @var Pinterest_For_Woocommerce
+		 * @var Pinterest_For_Woocommerce|null
 		 * @since 1.0.0
 		 */
 		protected static $instance = null;
@@ -105,7 +106,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		/**
 		 * The initialized state of the class.
 		 *
-		 * @var Pinterest_For_Woocommerce
+		 * @var bool
 		 * @since 1.0.0
 		 */
 		protected static $initialized = false;
@@ -122,7 +123,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * When set to true, the settings have been
 		 * changed and the runtime cached must be flushed
 		 *
-		 * @var Pinterest_For_Woocommerce
+		 * @var array<string, bool>
 		 * @since 1.0.0
 		 */
 		protected static $dirty_settings = array();
@@ -140,7 +141,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * The default settings that will be created
 		 * with the given values, if they don't exist.
 		 *
-		 * @var array
+		 * @var array<string, bool>
 		 * @since 1.0.0
 		 */
 		protected static $default_settings = array(
@@ -194,6 +195,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 		/**
 		 * Pinterest_For_Woocommerce Initializer.
+		 *
+		 * @return void
 		 */
 		public function maybe_init_plugin() {
 			if ( self::$initialized ) {
@@ -217,6 +220,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 		/**
 		 * Define Pinterest_For_Woocommerce Constants.
+		 *
+		 * @return void
 		 */
 		private function define_constants() {
 			define( 'PINTEREST_FOR_WOOCOMMERCE_PREFIX', 'pinterest-for-woocommerce' );
@@ -258,6 +263,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 		/**
 		 * Include required core files used in admin and on the frontend.
+		 *
+		 * @return void
 		 */
 		private function includes() {
 
@@ -276,6 +283,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Include plugins files and hook into actions and filters.
 		 *
 		 * @since  1.0.0
+		 * @return void
 		 */
 		public function init_plugin() {
 
@@ -306,8 +314,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 			add_action( 'init', array( Pinterest\RefreshToken::class, 'schedule_event' ) );
 			add_action( 'init', array( Pinterest\CommerceIntegration::class, 'init' ) );
 
-			// Register the marketing channel if the feature is included.
-			if ( defined( 'WC_MCM_EXISTS' ) ) {
+			// Register the marketing channel if WooCommerce provides the marketing channels API.
+			if ( class_exists( MarketingChannels::class ) ) {
 				add_action(
 					'init',
 					array( Pinterest\MultichannelMarketing\MarketingChannelRegistrar::class, 'register' )
@@ -337,6 +345,10 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 			// Hook the setup task. The hook admin_init is not triggered when the WC fetches the tasks using the endpoint: wp-json/wc-admin/onboarding/tasks and hence hooking into init.
 			add_action( 'init', array( $this, 'add_onboarding_task' ), 20 );
+
+			if ( defined( 'WP_CLI' ) && WP_CLI ) {
+				WP_CLI::add_command( 'wc pinterest feed', Pinterest\CLI\FeedCommand::class );
+			}
 		}
 
 		/**
@@ -387,6 +399,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 		/**
 		 * Init Pinterest_For_Woocommerce when WordPress initializes.
+		 *
+		 * @return void
 		 */
 		public function init() {
 			/**
@@ -407,6 +421,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 
 		/**
 		 * Init classes for admin interface.
+		 *
+		 * @return void
 		 */
 		public function admin_init() {
 			$view_factory         = new Pinterest\View\PHPViewFactory();
@@ -425,6 +441,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Init marketing notifications.
 		 *
 		 * @since 1.1.0
+		 * @return void
 		 */
 		public function init_marketing_notifications() {
 			$notifications = new MarketingNotifications();
@@ -512,6 +529,8 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Locales found in:
 		 *      - WP_LANG_DIR/pinterest-for-woocommerce/pinterest-for-woocommerce-LOCALE.mo
 		 *      - WP_LANG_DIR/plugins/pinterest-for-woocommerce-LOCALE.mo
+		 *
+		 * @return void
 		 */
 		private function load_plugin_textdomain() {
 			/**
@@ -573,7 +592,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * @param boolean $force  Controls whether to force getting a fresh value instead of one from the runtime cache.
 		 * @param string  $option Controls which option to read/write to.
 		 *
-		 * @return array
+		 * @return mixed The stored option value: usually an array, false when the option is not stored.
 		 */
 		public static function get_settings( $force = false, $option = PINTEREST_FOR_WOOCOMMERCE_OPTION_NAME ) {
 
@@ -726,6 +745,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Add API endpoints
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function init_api_endpoints() {
 			new Pinterest\API\Advertisers();
@@ -1020,6 +1040,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Injects needed meta tags to the site's header
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function maybe_inject_verification_code() {
 
@@ -1148,7 +1169,10 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 				Pinterest_For_Woocommerce()::save_setting( 'account_data', $data );
 				return $data;
 			} catch ( Throwable $th ) {
-				self::disconnect();
+				$saved_account_data = self::get_setting( 'account_data' );
+				if ( empty( $saved_account_data['id'] ) || ( $th instanceof PinterestApiException && 401 === $th->getCode() ) ) {
+					self::disconnect();
+				}
 				throw new Exception( esc_html__( 'There was an error getting the account data.', 'pinterest-for-woocommerce' ) );
 			}
 		}
@@ -1207,7 +1231,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		public static function get_billing_setup_info_from_account_data() {
 			$account_data = self::get_setting( 'account_data' );
 
-			return (bool) $account_data['is_billing_setup'];
+			return is_array( $account_data ) && ! empty( $account_data['is_billing_setup'] );
 		}
 
 		/**
@@ -1219,13 +1243,18 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * @return void
 		 */
 		public static function add_redeem_credits_info_to_account_data() {
-			$account_data = self::get_setting( 'account_data' );
-			$offer_code   = AdCreditsCoupons::get_coupon_for_merchant();
+			$offer_code = AdCreditsCoupons::get_coupon_for_merchant();
 
 			// Redeem the coupon.
 			$error_code    = false;
 			$error_message = '';
 			$redeem_status = AdCredits::redeem_credits( $offer_code, $error_code, $error_message );
+
+			// Redeeming can invalidate billing or disconnect the merchant; save on top of the stored data.
+			$account_data = self::get_setting( 'account_data', true );
+			if ( ! is_array( $account_data ) || empty( $account_data['id'] ) ) {
+				return;
+			}
 
 			$redeem_information = array(
 				'redeem_status' => $redeem_status,
@@ -1351,6 +1380,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Hook the parse_request action and serve the html
 		 *
 		 * @param WP $wp Current WordPress environment instance.
+		 * @return void
 		 */
 		public function verification_request( $wp ) {
 			$verification_data = self::get_data( 'verification_data' );
@@ -1438,7 +1468,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		/**
 		 * Returns the Terms object for the currently configured base country.
 		 *
-		 * @return array
+		 * @return array{tos_id: int, terms_url: string}
 		 */
 		public static function get_applicable_tos() {
 
@@ -1450,7 +1480,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		/**
 		 * Helper function to return the country set in WC's settings using wc_get_base_location().
 		 *
-		 * @param string $default_country Default country code to return if no country is set.
+		 * @param string|null $default_country Default country code to return if no country is set.
 		 *
 		 * @return mixed|string|null
 		 */
@@ -1468,6 +1498,7 @@ if ( ! class_exists( 'Pinterest_For_Woocommerce' ) ) :
 		 * Adds the onboarding task to the Tasklists.
 		 *
 		 * @since 1.2.11
+		 * @return void
 		 */
 		public function add_onboarding_task() {
 			if ( class_exists( TaskLists::class ) ) {

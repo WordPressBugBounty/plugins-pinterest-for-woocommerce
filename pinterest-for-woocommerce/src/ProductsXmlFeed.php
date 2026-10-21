@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class adding Save Pin support.
  *
  * @class   ProductsXmlFeed
- * @version 1.5.2
+ * @version 1.6.0
  */
 class ProductsXmlFeed {
 
@@ -32,7 +32,7 @@ class ProductsXmlFeed {
 	/**
 	 * The default data structure of the Item to be printed in the XML feed.
 	 *
-	 * @var array
+	 * @var string[]
 	 */
 	private static $feed_item_structure = array(
 		'g:id',
@@ -241,7 +241,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_item_group_id( $product, $property ) {
 
@@ -316,9 +316,9 @@ class ProductsXmlFeed {
 			 *
 			 * @since 1.4.27
 			 *
-			 * @param string          $description Resolved description after the variation→parent fallback.
-			 * @param WC_Product      $product     Variation product.
-			 * @param WC_Product|null $parent      Parent product, or null when not loaded (variation had its own description, or the parent post was deleted).
+			 * @param string                $description Resolved description after the variation→parent fallback.
+			 * @param WC_Product            $product     Variation product.
+			 * @param WC_Product|false|null $parent      Parent product, null when not loaded (variation had its own description), or false when the parent post was deleted.
 			 */
 			$description = apply_filters( 'pinterest_for_woocommerce_variation_description', $description, $product, $parent );
 		} else {
@@ -361,7 +361,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_g_product_type( $product, $property ) {
 
@@ -450,7 +450,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_g_image_link( $product, $property ) {
 
@@ -507,7 +507,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_g_price( $product, $property ) {
 
@@ -526,7 +526,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_sale_price( $product, $property ) {
 		if ( ! $product->is_on_sale() ) {
@@ -561,7 +561,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product  The product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_sale_price_effective_date( $product, $property ) {
 		if ( ! $product->is_on_sale() ) {
@@ -638,7 +638,7 @@ class ProductsXmlFeed {
 	 * @param WC_Product $product the product.
 	 * @param string     $property The name of the property.
 	 *
-	 * @return string
+	 * @return string|void
 	 */
 	private static function get_property_g_additional_image_link( $product, $property ) {
 
@@ -729,6 +729,8 @@ class ProductsXmlFeed {
 
 	/**
 	 * Get locale currency decimals
+	 *
+	 * @return mixed
 	 */
 	private static function get_currency_decimals() {
 		$currencies = get_transient( PINTEREST_FOR_WOOCOMMERCE_PREFIX . '_currencies_list' );

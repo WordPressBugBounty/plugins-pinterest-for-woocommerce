@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Handling Token Refresh.
  *
  * @class   RefreshToken
- * @version 1.5.2
+ * @version 1.6.0
  */
 class RefreshToken {
 
@@ -28,6 +28,7 @@ class RefreshToken {
 	 * Initialize Refresh Token actions and Action Scheduler hooks.
 	 *
 	 * @since 1.4.0
+	 * @return void
 	 */
 	public static function schedule_event() {
 		if ( ! Pinterest_For_Woocommerce::is_connected() ) {
@@ -44,7 +45,7 @@ class RefreshToken {
 	 *
 	 * @since 1.4.0
 	 *
-	 * @return true
+	 * @return bool
 	 */
 	public static function handle_refresh(): bool {
 		$token_data   = Pinterest_For_Woocommerce::get_data( 'token_data', true );

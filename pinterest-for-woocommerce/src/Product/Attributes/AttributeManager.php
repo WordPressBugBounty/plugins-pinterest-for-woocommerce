@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
  * Class AttributeManager
  *
  * @class   AttributeManager
- * @version 1.3.10
+ * @version 1.6.0
  */
 class AttributeManager {
 
@@ -31,7 +31,7 @@ class AttributeManager {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var AttributeManager
+	 * @var AttributeManager|null
 	 */
 	protected static $instance = null;
 
@@ -43,7 +43,7 @@ class AttributeManager {
 	/**
 	 * Attribute types mapped to product types.
 	 *
-	 * @var array
+	 * @var string[][]|null
 	 */
 	protected $attribute_types_map;
 
@@ -64,6 +64,7 @@ class AttributeManager {
 	 *
 	 * @param WC_Product         $product   WooCommerce product.
 	 * @param AttributeInterface $attribute Attribute to update.
+	 * @return void
 	 *
 	 * @throws InvalidValue If the attribute is invalid for the given product.
 	 */
@@ -167,6 +168,7 @@ class AttributeManager {
 	 *
 	 * @param WC_Product $product      WooCommerce Product.
 	 * @param string     $attribute_id Attribute ID.
+	 * @return void
 	 *
 	 * @throws InvalidValue If the attribute ID is invalid for the given product.
 	 */
@@ -277,6 +279,7 @@ class AttributeManager {
 	 *
 	 * @param WC_Product $product      WooCommerce product.
 	 * @param string     $attribute_id Attribute ID.
+	 * @return void
 	 *
 	 * @throws InvalidValue If the attribute type is invalid for the given product.
 	 */
