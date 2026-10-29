@@ -19,7 +19,7 @@ use Pinterest_For_Woocommerce;
  * Class Handling Commerce Integration operations.
  *
  * @class   CommerceIntegration
- * @version 1.6.0
+ * @version 1.6.1
  */
 class CommerceIntegration {
 
@@ -58,7 +58,7 @@ class CommerceIntegration {
 	 * Attempts to create Commerce Integration with Pinterest and schedules a retry in case of a failure.
 	 *
 	 * @param int $attempt Create Commerce Integration attempt number.
-	 * @return array
+	 * @return array<string, mixed>
 	 */
 	public static function handle_create( $attempt = 0 ): array {
 		try {
@@ -184,10 +184,15 @@ class CommerceIntegration {
 	 *
 	 * @since 1.4.11
 	 * @param string $external_business_id External Business ID.
-	 * @return array
+	 * @return array<string, mixed>
 	 */
 	public static function get_integration_data( $external_business_id = '' ): array {
 		global $wp_version;
+		/**
+		 * The WordPress version string.
+		 *
+		 * @var string $wp_version
+		 */
 
 		if ( empty( $external_business_id ) ) {
 			$external_business_id = self::generate_external_business_id();

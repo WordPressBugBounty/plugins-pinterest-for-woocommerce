@@ -3,7 +3,7 @@
         'name' => 'woocommerce/pinterest-for-woocommerce',
         'pretty_version' => 'dev-trunk',
         'version' => 'dev-trunk',
-        'reference' => '75f2a4fee020a3c8fccfc010b5da0da89a55b8b3',
+        'reference' => 'cbcec4e16a88a9a8f6f4bfefe30d111d94f7c1bc',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -67,7 +67,7 @@
         'woocommerce/pinterest-for-woocommerce' => array(
             'pretty_version' => 'dev-trunk',
             'version' => 'dev-trunk',
-            'reference' => '75f2a4fee020a3c8fccfc010b5da0da89a55b8b3',
+            'reference' => 'cbcec4e16a88a9a8f6f4bfefe30d111d94f7c1bc',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
