@@ -12,7 +12,6 @@ use Automattic\WooCommerce\Pinterest\Tracking\Conversions;
 use Automattic\WooCommerce\Pinterest\Tracking\Data;
 use Automattic\WooCommerce\Pinterest\Tracking\Data\Category;
 use Automattic\WooCommerce\Pinterest\Tracking\Data\Checkout;
-use Automattic\WooCommerce\Pinterest\Tracking\Data\None;
 use Automattic\WooCommerce\Pinterest\Tracking\Data\Product;
 use Automattic\WooCommerce\Pinterest\Tracking\Data\Search;
 use Automattic\WooCommerce\Pinterest\Tracking\PageVisit;
@@ -29,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Tracker responsible for hooking into system events.
  *
  * @class   Tracking
- * @version 1.6.2
+ * @version 1.6.3
  */
 class Tracking {
 
@@ -156,28 +155,13 @@ class Tracking {
 
 		// The PageVisit event ID is generated in the browser so full-page caches
 		// cannot reuse a PHP-generated ID across multiple visitors.
-		$data    = new None( '' );
-		$product = is_product() ? wc_get_product() : false;
-
-		if ( $product instanceof \WC_Product ) {
-			$data = new Product(
-				'',
-				$product->get_id(),
-				$product->get_name(),
-				wc_get_product_category_list( $product->get_id() ),
-				'brand',
-				wc_get_price_to_display( $product ),
-				get_woocommerce_currency(),
-				1
-			);
-		}
-
-		$this->track_event( static::EVENT_PAGE_VISIT, $data );
+		$product = PageVisit::get_page_product();
+		$this->track_event( static::EVENT_PAGE_VISIT, PageVisit::get_product_event_data( '', $product ) );
 
 		// The Tag tracker prints the beacon together with its PageVisit call, but it
 		// is skipped without an active Tag, so print the beacon here for CAPI-only stores.
 		if ( ! Tag::get_active_tag() && $this->has_tracker( Conversions::class ) ) {
-			PageVisit::print_beacon_script();
+			PageVisit::print_beacon_for_product( $product instanceof \WC_Product ? $product->get_id() : null );
 		}
 	}
 
@@ -545,7 +529,8 @@ class Tracking {
 	/**
 	 * Method which iterates over all the attached trackers and delegates the event to them.
 	 *
-	 * Server-side trackers (Conversions API) are skipped for crawler/bot requests.
+	 * Server-side trackers (Conversions API) are skipped for crawler/bot requests
+	 * and when the current visitor has not given marketing consent.
 	 * Browser-side rendering (Tag JS) is intentionally NOT skipped, so full-page
 	 * caches that omit `Vary: User-Agent` do not serve bot-rendered HTML missing
 	 * Tag JS to real users on a subsequent cache hit. See CrawlerDetector.
@@ -558,7 +543,20 @@ class Tracking {
 	 * @return void
 	 */
 	public function track_event( string $event_name, Data $data ) {
-		$skip_conversions = CrawlerDetector::is_crawler_request()
+		/**
+		 * Filters whether to skip Conversions API events based on user consent.
+		 *
+		 * Evaluated for every event, so it follows the consent of the current
+		 * request even when the Tag is printed for every visitor on cached pages.
+		 *
+		 * @since 1.6.3
+		 *
+		 * @param bool $disable_conversions_api Whether to skip Conversions API events due to user consent.
+		 */
+		$is_conversions_api_disabled_user_consent = apply_filters( 'woocommerce_pinterest_disable_conversions_api_user_consent', false );
+
+		$skip_conversions = $is_conversions_api_disabled_user_consent
+			|| CrawlerDetector::is_crawler_request()
 			|| ( static::EVENT_ADD_TO_CART === $event_name && CrawlerDetector::is_speculative_request() );
 
 		foreach ( $this->get_trackers() as $tracker ) {
@@ -567,8 +565,8 @@ class Tracking {
 				continue;
 			}
 
-			// Skip CAPI for crawlers and speculative cart additions, which do
-			// not represent a shopper choosing to add a product.
+			// Skip CAPI without marketing consent, for crawlers, and for speculative
+			// cart additions, which do not represent a shopper choosing to add a product.
 			if ( $skip_conversions && $tracker instanceof Conversions ) {
 				continue;
 			}
